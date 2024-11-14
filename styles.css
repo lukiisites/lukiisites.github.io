@@ -1,0 +1,548 @@
+/* Reset some basic styles */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Header container */
+header {
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation and Library text container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the items */
+  height: 100%; /* Ensure full vertical centering */
+}
+
+/* Library text styling */
+.library-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #c78fdf; /* Violet color */
+  letter-spacing: 2px;
+}
+
+/* Right-aligned navigation */
+.nav-right ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-right li {
+  margin-left: 30px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #000; /* Black color for default state */
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s, padding-bottom 0.3s;
+}
+
+.nav-right a:hover {
+  color: #c78fdf; /* Violet color on hover */
+  padding-bottom: 5px;
+  border-bottom: 2px solid #c78fdf; /* Violet underline on hover */
+}
+
+/* Horizontal line */
+hr {
+  border: 0;
+  height: 0.5px; /* Thinner line */
+  background-color: #ecf0f1;
+  margin-top: 20px;
+}
+
+/* Hero Section (Background Image with White Overlay) */
+.hero {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=2000'); /* New Image URL */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  height: 600px; /* Adjusted height to fit the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
+
+/* White overlay with partial transparency */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* White overlay with 60% opacity */
+  z-index: 1; /* Ensure overlay is behind the text */
+}
+
+/* Text inside Hero Section */
+.hero-text {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 4rem;
+  color: #c78fdf; /* Violet color */
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: black; /* Change text color to black */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* About Our Library Section */
+/* About Our Library Section */
+.about-library {
+  padding: 50px;
+  background-color: #f7f7f7; /* Soft light gray background */
+  border-radius: 8px; /* Slightly rounded corners for a softer look */
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-text {
+  width: 50%;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  width: 40%;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Contact Section */
+/* Contact Section */
+.contact {
+  padding: 50px;
+  background-color: #c78fdf; /* Violet background color */
+  color: white; /* Text color set to white for contrast */
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+}
+
+.contact-details {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  color: #333; /* Dark text for contrast inside the white box */
+  border-radius: 8px;
+}
+
+.contact-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #c78fdf; /* Violet color for the headings */
+}
+
+.contact-details p {
+  font-size: 1.1rem;
+}
+
+.contact-details a {
+  color: #c78fdf; /* Violet color for the email link */
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+/* Books Section */
+/* General styles */
+.featured-books-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.featured-books-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* Create 4 columns */
+  gap: 30px;  /* Space between each book */
+  margin-top: 30px;
+  align-items: start;
+}
+
+/* Style for individual book cards */
+.book-card {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+}
+
+.book-card img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Optional responsiveness for smaller screens */
+@media (max-width: 1200px) {
+  .book-grid {
+      grid-template-columns: repeat(3, 1fr);  /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .book-grid {
+      grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .book-grid {
+      grid-template-columns: 1fr;  /* 1 column on mobile screens */
+  }
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+.book-detail-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Book Info Section */
+.book-info-section {
+  display: flex;
+  flex-direction: row; /* Ensure content is aligned horizontally */
+  justify-content: flex-start; /* Align items to the start (left) */
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Image */
+.book-image {
+  width: 40%; /* Increased width for image */
+  max-width: 250px; /* Increased max width */
+  margin-right: 20px; /* Space between the image and description */
+}
+
+.book-image img {
+  width: 100%; /* Ensure the image fills its container */
+  border-radius: 10px;
+  transition: transform 0.3s;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.book-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Book Details (Right Side) */
+.book-details {
+  width: 55%; /* Description takes more space */
+  padding-left: 20px;
+}
+
+.book-title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.book-author {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Book Description Section */
+.book-description {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-description h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.book-description p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin-top: 30px;
+}
+
+.reviews-section h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.review {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+.review:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.reviewer {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #bbb;
+  text-align: right;
+  margin-top: 10px;
+}
+
+/* Review Submission Form */
+.review-form {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.review-form h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.review-form textarea,
+.reviewer-name-field {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: background 0.3s;
+  resize: vertical;
+}
+
+.review-form textarea:focus,
+.reviewer-name-field:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.submit-review-btn {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-review-btn:hover {
+  background-color: #357ab7;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #4a90e2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #357ab7;
+}
+
+@media(max-width:600px){
+  .book-image {
+    width: 60%; /* Adjust image width for smaller screens */
+    max-width: 150px;
+  }
+
+  .book-details {
+    width: 35%; /* Adjust description width for smaller screens */
+  }
+}
+/* Navigation */
+.nav-bar {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.nav-bar a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+#searchB.search-section {
+  margin-top: 40px;
+  text-align: center;
+}
+#searchBar {
+  width: 50%;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Transparent border */
+  border-radius: 30px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  color: white; /* Text color */
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  margin-left: auto;
+  margin-right: auto; /* Center horizontally */
+}
+
+#searchResults {
+  position: absolute;
+  top: 100%; /* Position it directly below the search bar */
+  width: 50%; /* Same width as the search bar */
+  margin-left: auto;
+  margin-right: auto; /* Center horizontally */
+  text-align: left;
+  background-color: white;
+  border: 1px solid #ddd; /* Border to make it visible */
+  border-radius: 10px;
+  z-index: 10; /* Ensure it's above other content */
+  max-height: 200px;
+  overflow-y: auto; /* Allow scrolling if the results are too long */
+}
+
+#searchBar:focus {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on focus */
+  color: white; /* Keeping the text color white */
+}
+
+.search-result {
+  background-color: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  color: white; /* White text */
+}
+
+.search-result a {
+  text-decoration: none;
+  color: white; /* White links */
+}
+
+.search-result h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.search-result p {
+  margin: 5px 0 0;
+  color: rgba(255, 255, 255, 0.7); /* Lighter text color */
+}
