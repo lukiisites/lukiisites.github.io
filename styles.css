@@ -25,7 +25,7 @@ header {
   justify-content: space-between;
   align-items: center; /* Vertically center the items */
   height: 100%; /* Ensure full vertical centering */
-  flex-wrap: nowrap; /* Ensure it doesn't wrap */
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 /* Library text styling */
@@ -65,10 +65,9 @@ header {
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
-  /* On mobile, adjust the layout to avoid stacking */
   .nav-container {
-    justify-content: center; /* Center the content */
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-direction: row; /* Keep items in a row */
+    justify-content: center; /* Center the items */
   }
 
   .library-text {
@@ -78,30 +77,40 @@ header {
 
   .nav-right ul {
     display: flex;
-    justify-content: center; /* Keep items aligned horizontally */
+    justify-content: space-between; /* Keep items spaced out horizontally */
     padding-left: 0;
     margin: 0;
   }
 
   .nav-right li {
-    margin-left: 15px; /* Reduce margin to fit */
+    margin-left: 15px; /* Slightly reduce margin for compact look */
   }
 
   .nav-right a {
-    font-size: 1.2rem; /* Slightly larger font size */
+    font-size: 1.2rem; /* Slightly larger font for readability */
   }
 }
 
 @media (max-width: 480px) {
-  /* Smaller screens */
+  /* On very small screens */
   .library-text {
-    font-size: 1.5rem; /* Further reduce the size of library text */
+    font-size: 1.5rem; /* Further reduce size of library text */
     margin-bottom: 10px;
   }
 
   .nav-right a {
     font-size: 1rem; /* Adjust font size for smaller screens */
   }
+
+  .nav-right ul {
+    justify-content: center; /* Center items on very small screens */
+  }
+
+  .nav-right li {
+    margin-left: 10px; /* Reduce margin even further */
+  }
+}
+
 .hero {
   position: relative;
   background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=2000'); /* New Image URL */
