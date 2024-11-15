@@ -21,24 +21,24 @@
                 </ul>
             </nav>
         </div>
-        <hr>
     </header>
 
     <!-- Background Section with Text -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-text">
             <h1>Discover Your Next</h1>
             <h2>Favorite Book</h2>
             <p>Explore our vast collection of books and immerse yourself in new worlds of knowledge and imagination.</p>
             <section class="search-section" id="search">
-              <h2>Search for Books</h2>
-              <input type="text" id="searchBar" placeholder="Search by title or author" onkeyup="searchBooks()">
-              <div id="searchResults" class="search-results"></div>
-          </section>
-          </section>
+                <h2>Search for Books</h2>
+                <input type="text" id="searchBar" placeholder="Search by title or author" onkeyup="searchBooks()">
+                <div id="searchResults" class="search-results"></div>
+            </section>
         </div>
-   
-    <section class="about-library">
+    </section>
+
+    <!-- About Our Library Section -->
+    <section class="about-library" id="about">
         <div class="about-content">
             <div class="about-text">
                 <h2>About Our Library</h2>
@@ -49,7 +49,28 @@
             </div>
         </div>
     </section>
-    <section class="featured-books-section">
+
+    <!-- Activities Section -->
+    <section class="activities-section" id="activities" style="background: linear-gradient(180deg, #ffffff 0%, #f4e1f5 30%, #ffffff 100%); padding: 40px 20px; border-radius: 20px;">
+        <h2 style="text-align: center; color: #c78fdf; font-family: 'Georgia', serif; margin-bottom: 30px;">Library Activities</h2>
+        <div class="activities-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            <div class="activity" style="background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #c78fdf; font-family: 'Verdana', sans-serif; margin-bottom: 15px;">Book Reading Sessions</h3>
+                <p style="color: #555; font-family: 'Arial', sans-serif; line-height: 1.5;">Join our weekly book reading sessions where we explore popular literature and engage in meaningful discussions. Perfect for book lovers looking to connect with others.</p>
+            </div>
+            <div class="activity" style="background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #c78fdf; font-family: 'Verdana', sans-serif; margin-bottom: 15px;">Workshops & Seminars</h3>
+                <p style="color: #555; font-family: 'Arial', sans-serif; line-height: 1.5;">Participate in workshops led by authors and experts on various topics including writing, storytelling, and research skills. Open to all ages!</p>
+            </div>
+            <div class="activity" style="background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #c78fdf; font-family: 'Verdana', sans-serif; margin-bottom: 15px;">Children's Story Hour</h3>
+                <p style="color: #555; font-family: 'Arial', sans-serif; line-height: 1.5;">Bring your little ones to our engaging story hour, where stories come alive with fun and interactive storytelling. A great way to inspire a love of reading from an early age.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="featured-books-section" id="books">
       <h2>Featured Books</h2>
       <div class="featured-books-content">
           <div class="featured-text">
@@ -86,7 +107,7 @@
   </section>
     <main>
           <!-- Contact Section -->
-          <section class="contact">
+          <section class="contact" id="contact">
             <div class="contact-container">
                 <h2>Get in Touch</h2>
                 <div class="contact-info">
