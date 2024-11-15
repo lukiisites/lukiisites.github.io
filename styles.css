@@ -1,8 +1,11 @@
+/* Universal Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Body styles */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f9;
@@ -23,6 +26,7 @@ header {
   justify-content: space-between;
   align-items: center; /* Vertically center the items */
   height: 100%; /* Ensure full vertical centering */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 /* Library text styling */
@@ -37,12 +41,15 @@ header {
 .nav-right ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;  /* Allow navigation items to stack on smaller screens */
+  padding-left: 0;
 }
 
 .nav-right li {
   margin-left: 30px;
 }
 
+/* Navigation link styling */
 .nav-right a {
   text-decoration: none;
   color: #000; /* Black color for default state */
@@ -57,6 +64,46 @@ header {
   padding-bottom: 5px;
   border-bottom: 2px solid #c78fdf; /* Violet underline on hover */
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  /* Stack the navigation items on small screens */
+  .nav-container {
+    flex-direction: column; /* Stack library text and nav on top of each other */
+    text-align: center;
+  }
+
+  .library-text {
+    font-size: 1.8rem; /* Slightly smaller library text */
+    margin-bottom: 15px;
+  }
+
+  /* Navigation items */
+  .nav-right ul {
+    display: block; /* Stack the nav items vertically */
+  }
+
+  .nav-right li {
+    margin-left: 0; /* Remove left margin for stacked items */
+    margin-top: 10px; /* Add some spacing between items */
+  }
+
+  .nav-right a {
+    font-size: 1.2rem; /* Increase the font size slightly for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller screens */
+  .library-text {
+    font-size: 1.5rem; /* Further reduce the size of library text */
+  }
+
+  .nav-right a {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
 
 /* Hero Section (Background Image with White Overlay) */
 .hero {
