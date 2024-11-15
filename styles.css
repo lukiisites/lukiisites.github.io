@@ -66,49 +66,53 @@ header {
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
+  /* Center the content when screen is small */
   .nav-container {
-    justify-content: center; /* Center the items */
+    justify-content: space-between; /* Make sure the text and nav stay aligned */
   }
 
-  /* Keep the text and nav aligned in a row */
   .library-text {
-    font-size: 1.8rem; /* Slightly smaller library text */
-    margin-bottom: 10px; /* Less space between text and navigation */
+    font-size: 1.8rem; /* Slightly smaller font */
+    margin-bottom: 10px; /* Reduce the space between the texts */
   }
 
   .nav-right ul {
-    justify-content: center; /* Center nav items on smaller screens */
+    display: flex; /* Keep the items in a row */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow the nav items to wrap if necessary */
   }
 
   .nav-right li {
-    margin-left: 15px; /* Slightly smaller margin */
+    margin-left: 10px; /* Reduce margin to keep items closer */
   }
 
   .nav-right a {
-    font-size: 1.1rem; /* Adjust font size */
+    font-size: 1rem; /* Smaller font for better readability */
   }
 }
 
 @media (max-width: 480px) {
-  /* Further adjustments for smaller screens */
+  /* Further adjustments for very small screens */
   .library-text {
-    font-size: 1.5rem; /* Further reduce font size */
+    font-size: 1.5rem; /* Reduce font size more */
   }
 
   .nav-right a {
-    font-size: 1rem; /* Smaller font size for nav links */
+    font-size: 0.9rem; /* Smaller font for very small screens */
   }
 
   .nav-right ul {
-    flex-wrap: wrap; /* Allow nav items to wrap on very small screens */
-    justify-content: center; /* Center nav items */
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
   }
 
   .nav-right li {
-    margin-left: 10px; /* Adjust margin for very small screens */
-    margin-top: 5px; /* Add space between items */
+    margin-left: 5px; /* Reduce margin between items */
+    margin-top: 5px; /* Add some top margin to create space */
   }
 }
+
 
 .hero {
   position: relative;
