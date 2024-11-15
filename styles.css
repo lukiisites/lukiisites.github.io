@@ -25,7 +25,7 @@ header {
   justify-content: space-between;
   align-items: center; /* Vertically center the items */
   height: 100%; /* Ensure full vertical centering */
-  flex-wrap: nowrap; /* Prevent wrapping */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 /* Library text styling */
@@ -41,13 +41,14 @@ header {
   list-style: none;
   display: flex;
   padding-left: 0;
-  margin: 0;
+  flex-wrap: nowrap; /* Prevent wrapping of nav items */
 }
 
 .nav-right li {
   margin-left: 30px;
 }
 
+/* Navigation link styling */
 .nav-right a {
   text-decoration: none;
   color: #000; /* Black color for default state */
@@ -66,48 +67,46 @@ header {
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: row; /* Keep items in a row */
     justify-content: center; /* Center the items */
   }
 
+  /* Keep the text and nav aligned in a row */
   .library-text {
     font-size: 1.8rem; /* Slightly smaller library text */
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Less space between text and navigation */
   }
 
   .nav-right ul {
-    display: flex;
-    justify-content: space-between; /* Keep items spaced out horizontally */
-    padding-left: 0;
-    margin: 0;
+    justify-content: center; /* Center nav items on smaller screens */
   }
 
   .nav-right li {
-    margin-left: 15px; /* Slightly reduce margin for compact look */
+    margin-left: 15px; /* Slightly smaller margin */
   }
 
   .nav-right a {
-    font-size: 1.2rem; /* Slightly larger font for readability */
+    font-size: 1.1rem; /* Adjust font size */
   }
 }
 
 @media (max-width: 480px) {
-  /* On very small screens */
+  /* Further adjustments for smaller screens */
   .library-text {
-    font-size: 1.5rem; /* Further reduce size of library text */
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* Further reduce font size */
   }
 
   .nav-right a {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1rem; /* Smaller font size for nav links */
   }
 
   .nav-right ul {
-    justify-content: center; /* Center items on very small screens */
+    flex-wrap: wrap; /* Allow nav items to wrap on very small screens */
+    justify-content: center; /* Center nav items */
   }
 
   .nav-right li {
-    margin-left: 10px; /* Reduce margin even further */
+    margin-left: 10px; /* Adjust margin for very small screens */
+    margin-top: 5px; /* Add space between items */
   }
 }
 
