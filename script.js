@@ -7,8 +7,6 @@ const books = [
     { title: 'Advanced Programming', author: 'Jane Doe', link: 'book5.html' },
     { title: 'Biology 101', author: 'John Smith', link: 'book6.html' }
 ];
-
-
 function searchBooks() {
     const query = document.getElementById('searchBar').value.toLowerCase(); 
     const searchResults = document.getElementById('searchResults');
