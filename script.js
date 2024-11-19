@@ -3,7 +3,7 @@ const books = [
     { title: 'Diabolica', author: 'S.J. Kincaid', link: 'book1.html' },
     { title: 'Ion', author: 'Liviu Rebreanu', link: 'Ion.html' },
     { title: 'Baltagul', author: 'Mihail Sadoveanu', link: 'baltagul.html' },
-    { title: 'Book 4', author: 'Author Name 4', link: 'book4.html' },
+    { title: 'Moara cu noroc', author: 'Ioan Slavici', link: 'moaracunoroc.html' },
     { title: 'Advanced Programming', author: 'Jane Doe', link: 'book5.html' },
     { title: 'Biology 101', author: 'John Smith', link: 'book6.html' }
 ];
