@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Detail</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+</head>
+
+<body>
+
+    <div class="book-detail-container">
+        <!-- Book Info Section -->
+        <div class="book-info-section">
+            <!-- Left Side: Book Image -->
+            <div class="book-image">
+                <img src="data:image/jpeg;base64,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" alt="Book Cover"> <!-- Replace with your book image -->
+            </div>
+
+            <!-- Right Side: Book Title, Author -->
+            <div class="book-details">
+                <h1 class="book-title">Ion</h1>
+                <p class="book-author">A fost publicat de Liviu Rebreanu .Ion este primul roman obiectiv din literatura română, fiind apărut în anul 1920, după o lungă perioadă de elaborare, așa cum însuși autorul menționează în finalul operei, între martie 1913 - iulie 1920.</p>
+            </div>
+        </div>
+
+        <!-- Book Description Section -->
+        <div class="book-description">
+            <h2>Descriere</h2>
+            <p>
+                Romanul Ion de Liviu Rebreanu este o capodoperă a literaturii române, ce explorează conflictul dintre dorința de avere și iubire. Ion, protagonistul, este un țăran ambițios care își dorește pământ cu orice preț. Pentru a-l obține, o seduce și o ia de soție pe Ana, fiica unui bogat chiabur, Vasile Baciu, deși o iubește pe Florica, o fată săracă. În timp ce Ana suferă din cauza nepăsării lui Ion, acesta devine tot mai obsedat de averea sa. Tragedia lovește când Ana se sinucide, iar Ion este omorât pentru faptele sale. Romanul reflectă lupta interioară a personajului, realismul rural și tema destinului tragic.
+            </p>
+        </div>
+
+        <div class="review-form">
+            <h3>Share Your Opinion</h3>
+            <form id="review-form">
+                <textarea name="review" placeholder="Write your review here..." rows="5" required></textarea>
+                <input type="text" class="reviewer-name-field" placeholder="Your Name" required> 
+                <button type="submit" class="submit-review-btn">Submit Review</button>
+            </form>
+        </div>
+        
+
+        <!-- Display Submitted Reviews -->
+        <div id="reviews-section">
+            <!-- Reviews will be appended here dynamically -->
+        </div>
+        <!-- Back Button -->
+        <a href="index.html" class="back-button">Back to Books</a>
+    </div>
+    <script>
+        // Get a unique book identifier (could be set dynamically for each book page)
+        const bookId = 'book2'; // Replace 'book1' with a variable that identifies the current book
+        
+        // Function to load existing reviews for the current book from local storage
+        function loadReviews() {
+            const storedReviews = JSON.parse(localStorage.getItem(bookId)) || [];
+            const reviewsSection = document.getElementById('reviews-section');
+            reviewsSection.innerHTML = ''; // Clear existing reviews
+        
+            // Loop through stored reviews and display them
+            storedReviews.forEach(review => {
+                const reviewElement = document.createElement('div');
+                reviewElement.classList.add('review');
+                reviewElement.innerHTML = `
+                    <p>"${review.text}"</p>
+                    <p class="reviewer">- ${review.name}</p>
+                `;
+                reviewsSection.appendChild(reviewElement);
+            });
+        }
+        
+        // Load reviews on page load
+        window.onload = loadReviews;
+        
+        document.getElementById('review-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const reviewText = document.querySelector('textarea[name="review"]').value;
+            const reviewerName = document.querySelector('.reviewer-name-field').value; // Updated selector for name field
+            const storedReviews = JSON.parse(localStorage.getItem(bookId)) || [];
+            
+            // Add the new review with a timestamp to make each review unique
+            storedReviews.push({ text: reviewText, name: reviewerName, id: Date.now() }); // Added unique id
+            localStorage.setItem(bookId, JSON.stringify(storedReviews));
+        
+            loadReviews();
+            document.querySelector('textarea[name="review"]').value = '';
+            document.querySelector('.reviewer-name-field').value = ''; // Clear name field after submission
+        });
+    </script>
+
+</body>
+
+</html>
