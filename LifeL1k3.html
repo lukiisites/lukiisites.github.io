@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detalii Carte</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link către fișierul CSS extern -->
+</head>
+
+<body>
+
+    <div class="book-detail-container">
+        <!-- Secțiunea cu informații despre carte -->
+        <div class="book-info-section">
+            <!-- Partea stângă: Imaginea cărții -->
+            <div class="book-image">
+                <img src="https://m.media-amazon.com/images/I/91m+Wfqpg-L.jpg" alt="LifeL1k3 de Jay Kristoff">
+            </div>
+
+            <!-- Partea dreaptă: Descrierea cărții -->
+            <div class="book-description">
+                <h1>LifeL1k3</h1>
+                <h2>Autor: Jay Kristoff</h2>
+                <p>
+                    Într-o lume post-apocaliptică, plină de roboți umani și lupte pentru supraviețuire, Eve descoperă un secret care ar putea schimba totul. 
+                    Plină de acțiune, întorsături neașteptate și dileme morale, *LifeL1k3* explorează granițele dintre om și mașină, loialitate și trădare.
+                </p>
+            </div>
+        </div>
+    </div>
+<div class="review-form">
+            <h3>Share Your Opinion</h3>
+            <form id="review-form">
+                <textarea name="review" placeholder="Write your review here..." rows="5" required></textarea>
+                <input type="text" class="reviewer-name-field" placeholder="Your Name" required> 
+                <button type="submit" class="submit-review-btn">Submit Review</button>
+            </form>
+        </div>
+        
+
+        <!-- Display Submitted Reviews -->
+        <div id="reviews-section">
+            <!-- Reviews will be appended here dynamically -->
+        </div>
+
+        <!-- Back Button -->
+        <a href="index.html" class="back-button">Back to Books</a>
+    </div>
+    <script>
+    // Get a unique book identifier (could be set dynamically for each book page)
+    const bookId = 'book5'; // Replace 'book1' with a variable that identifies the current book
+    
+    // Function to load existing reviews for the current book from local storage
+    function loadReviews() {
+        const storedReviews = JSON.parse(localStorage.getItem(bookId)) || [];
+        const reviewsSection = document.getElementById('reviews-section');
+        reviewsSection.innerHTML = ''; // Clear existing reviews
+    
+        // Loop through stored reviews and display them
+        storedReviews.forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+            reviewElement.innerHTML = 
+                <p>"${review.text}"</p>
+                <p class="reviewer">- ${review.name}</p>
+            ;
+            reviewsSection.appendChild(reviewElement);
+        });
+    }
+    
+    // Load reviews on page load
+    window.onload = loadReviews;
+    
+    document.getElementById('review-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const reviewText = document.querySelector('textarea[name="review"]').value;
+        const reviewerName = document.querySelector('.reviewer-name-field').value; // Updated selector for name field
+        const storedReviews = JSON.parse(localStorage.getItem(bookId)) || [];
+        
+        // Add the new review with a timestamp to make each review unique
+        storedReviews.push({ text: reviewText, name: reviewerName, id: Date.now() }); // Added unique id
+        localStorage.setItem(bookId, JSON.stringify(storedReviews));
+    
+        loadReviews();
+        document.querySelector('textarea[name="review"]').value = '';
+        document.querySelector('.reviewer-name-field').value = ''; // Clear name field after submission
+    });
+</script>
+
+
+</body>
+
+</html>
