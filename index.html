@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Website</title>
+    <title>Biblioteca</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="nav-container">
-            <div class="library-text">Library</div>
+            <div class="library-text">Biblioteca</div>
             <nav class="nav-right">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#books">Books</a></li>
-                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#home">Acasa</a></li>
+                    <li><a href="#about">Despre</a></li>
+                    <li><a href="#books">Carti</a></li>
+                    <li><a href="#activities">Activitati</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -26,11 +26,11 @@
     <!-- Background Section with Text -->
     <section class="hero" id="home">
         <div class="hero-text">
-            <h1>Discover Your Next</h1>
-            <h2>Favorite Book</h2>
-            <p>Explore our vast collection of books and immerse yourself in new worlds of knowledge and imagination.</p>
+<h1>Descoperă-ți următoarea</h1>
+            <h2>Carte preferată</h2>
+            <p>Explorați colecția noastră vastă de cărți și cufundați-vă în noi lumi ale cunoașterii și imaginației.</p>
             <section class="search-section" id="search">
-                <h2>Search for Books</h2>
+                <h2>Cauta Carti</h2>
                 <input type="text" id="searchBar" placeholder="Search by title or author" onkeyup="searchBooks()">
                 <div id="searchResults" class="search-results"></div>
             </section>
@@ -41,8 +41,8 @@
     <section class="about-library" id="about">
         <div class="about-content">
             <div class="about-text">
-                <h2>About Our Library</h2>
-                <p>Our library offers an extensive collection of books, ranging from timeless classics to modern bestsellers. Whether you’re looking to dive deep into history, explore the world of science, or discover a new genre, our collection has something for everyone. Join us in exploring the vast realms of knowledge and imagination.</p>
+               <h2>Despre biblioteca noastră</h2>
+                <p>Biblioteca noastră oferă o colecție extinsă de cărți, de la clasice atemporale la bestselleruri moderne. Indiferent dacă doriți să vă scufundați adânc în istorie, să explorați lumea științei sau să descoperiți un nou gen, colecția noastră are ceva pentru toată lumea. Alăturați-vă nouă pentru a explora tărâmurile vaste ale cunoașterii și imaginației.</p>
             </div>
             <div class="about-image">
                 <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=500" alt="Library Image">
@@ -50,48 +50,52 @@
         </div>
     </section>
     <section class="activities-section" id="activities" style="background: linear-gradient(180deg, #ffffff 0%, #f4e1f5 30%, #ffffff 100%); padding: 40px 20px; border-radius: 20px;">
-        <h2 style="text-align: center; color: #c78fdf; font-family: 'Georgia', serif; margin-bottom: 30px;">Library Activities</h2>
+        <h2 style="text-align: center; color: #c78fdf; font-family: 'Georgia', serif; margin-bottom: 30px;">Activitati-le Librariei</h2>
         <div class="activities-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
             <div class="activity" style="background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #c78fdf; font-family: 'Verdana', sans-serif; margin-bottom: 15px;">Book Reading Sessions</h3>
-                <p style="color: #555; font-family: 'Arial', sans-serif; line-height: 1.5;">Join our weekly book reading sessions where we explore popular literature and engage in meaningful discussions. Perfect for book lovers looking to connect with others.</p>
+                <h3 style="color: #c78fdf; font-family: 'Verdana', sans-serif; margin-bottom: 15px;">Sesiuni de citire a cărților</h3>
+                <p style="color: #555; font-family: 'Arial', sans-serif; line-height: 1.5;">
+Alăturați-vă sesiunilor noastre săptămânale de citire de cărți în care explorăm literatura populară și ne angajăm în discuții semnificative. Perfect pentru iubitorii de cărți care doresc să se conecteze cu ceilalți.</p>
             </div>
             <div class="activity" style="background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #c78fdf; font-family: 'Verdana', sans-serif; margin-bottom: 15px;">Workshops & Seminars</h3>
-                <p style="color: #555; font-family: 'Arial', sans-serif; line-height: 1.5;">Participate in workshops led by authors and experts on various topics including writing, storytelling, and research skills. Open to all ages!</p>
+                <h3 style="color: #c78fdf; font-family: 'Verdana', sans-serif; margin-bottom: 15px;">
+Ateliere și seminarii</h3>
+                <p style="color: #555; font-family: 'Arial', sans-serif; line-height: 1.5;">Participați la ateliere conduse de autori și experți pe diverse subiecte, inclusiv scriere, povestire și abilități de cercetare. Deschis tuturor vârstelor!</p>
             </div>
             <div class="activity" style="background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #c78fdf; font-family: 'Verdana', sans-serif; margin-bottom: 15px;">Children's Story Hour</h3>
-                <p style="color: #555; font-family: 'Arial', sans-serif; line-height: 1.5;">Bring your little ones to our engaging story hour, where stories come alive with fun and interactive storytelling. A great way to inspire a love of reading from an early age.</p>
+                <h3 style="color: #c78fdf; font-family: 'Verdana', sans-serif; margin-bottom: 15px;">Ora Poveștilor pentru Copii</h3>
+                <p style="color: #555; font-family: 'Arial', sans-serif; line-height: 1.5;">
+Aduceți-i pe cei mici la ora noastră captivantă a poveștii, unde poveștile prind viață cu povestiri distractive și interactive. O modalitate excelentă de a inspira dragostea pentru lectură de la o vârstă fragedă.
+</p>
             </div>
         </div>
     </section>
     <section class="featured-books-section" id="books">
-      <h2>Featured Books</h2>
+      <h2>Carti Noi</h2>
       <div class="featured-books-content">
           <div class="featured-text">
           </div>
           <div class="book-carousel">
               <div class="book-grid">
-                  <!-- Book 1 -->
+               
                   <a href="book1.html" class="book-card">
                       <img src="data:image/jpeg;base64,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" alt="Book 1">
                       <h3>Diabolica</h3>
                       <p>S.J. Kincaid</p>
                   </a>
-                  <!-- Book 2 -->
+                 
                   <a href="book2.html" class="book-card">
                       <img src="book2.jpg" alt="Book 2">
                       <h3>Book 2</h3>
                       <p>Author Name</p>
                   </a>
-                  <!-- Book 3 -->
+                
                   <a href="book3.html" class="book-card">
                       <img src="book3.jpg" alt="Book 3">
                       <h3>Book 3</h3>
                       <p>Author Name</p>
                   </a>
-                  <!-- Book 4 -->
+                 
                   <a href="book4.html" class="book-card">
                       <img src="book4.jpg" alt="Book 4">
                       <h3>Book 4</h3>
@@ -105,19 +109,19 @@
           <!-- Contact Section -->
           <section class="contact" id="contact">
             <div class="contact-container">
-                <h2>Get in Touch</h2>
+                <h2>Contactea-ne</h2>
                 <div class="contact-info">
                     <div class="contact-details">
-                        <h3>Visit Us</h3>
+                        <h3>Vizitati-ne</h3>
                         <p>123 Library Street<br>City, State 12345</p>
                     </div>
                     <div class="contact-details">
-                        <h3>Opening Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 8:00 PM<br>Saturday - Sunday: 10:00 AM - 6:00 PM</p>
+                        <h3>Orele de deschidere</h3>
+                        <p>Luni-7:30-16:00<br>Marti: 12:15-16:00<br>Miercuri:7:30-16:00<br>Joi:7:30-16:00<br> Vineri:12:15-14:00</p>
                     </div>
                     <div class="contact-details">
-                        <h3>Contact Info</h3>
-                        <p>Phone: (123) 456-7890<br>Email: <a href="mailto:info@library.com">info@library.com</a></p>
+                        <h3>Informații de contact</h3>
+                        <p>Telefon: 0748208077<br>Email: <a href="mailto:dorinafelicia.48@gmail.com">dorinafelicia.48@gmail.com</a></p>
                     </div>
                 </div>
             </div>
