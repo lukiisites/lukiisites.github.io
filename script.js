@@ -30,6 +30,6 @@ function searchBooks() {
         });
     } else {
       
-        searchResults.innerHTML = '<p>Nu s-au găsit cărți care să corespundă căutării dvs.</p>';
+        searchResults.innerHTML = '<p>Nu s-au găsit cărți care să corespundă căutării dvs</p>';
     }
 }
