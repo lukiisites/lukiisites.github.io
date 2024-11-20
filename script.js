@@ -4,8 +4,8 @@ const books = [
     { title: 'Ion', author: 'Liviu Rebreanu', link: 'ion.html' },
     { title: 'Baltagul', author: 'Mihail Sadoveanu', link: 'baltagul.html' },
     { title: 'Moara cu noroc', author: 'Ioan Slavici', link: 'moaracunoroc.html' },
-    { title: 'Advanced Programming', author: 'Jane Doe', link: 'book5.html' },
-    { title: 'Biology 101', author: 'John Smith', link: 'book6.html' }
+    { title: 'LifeL1k3', author: 'Jay Kristoff', link: 'LifeL1k3.html' },
+    { title: 'Al 5-lea val', author: 'Rick Yancey', link: 'Al5-leaval.html' }
 ];
 function searchBooks() {
     const query = document.getElementById('searchBar').value.toLowerCase(); 
