@@ -127,5 +127,33 @@ Aduceți-i pe cei mici la ora noastră captivantă a poveștii, unde poveștile 
             </div>
         </section>
     </main>
+    <script>
+  // Function to track visitor data
+  function trackVisitor() {
+    // Get the current date and time
+    const timestamp = new Date().toISOString();
+    
+    // Get user data
+    const ip = 'unknown'; // Can’t track IP with JavaScript alone
+    const userAgent = navigator.userAgent;
+
+    // Log the data to localStorage (or sessionStorage)
+    const visitData = {
+      timestamp: timestamp,
+      userAgent: userAgent,
+    };
+
+    // Store data in localStorage
+    let visits = JSON.parse(localStorage.getItem('visitor_data')) || [];
+    visits.push(visitData);
+    localStorage.setItem('visitor_data', JSON.stringify(visits));
+
+    console.log('Visitor Data Logged:', visitData);
+  }
+
+  // Run the tracking function
+  trackVisitor();
+</script>
+
 </body>
 </html>
