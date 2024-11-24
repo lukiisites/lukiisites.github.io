@@ -128,23 +128,31 @@ Aduceți-i pe cei mici la ora noastră captivantă a poveștii, unde poveștile 
         </section>
     </main>
   
-  <script>
+ <script>
   function trackVisitor() {
     const timestamp = new Date().toISOString();
     const userAgent = navigator.userAgent;
 
+    // Replace 'YOUR_ACCESS_KEY' with your actual API key from ipstack
+    const apiKey = 'YOUR_ACCESS_KEY';  // Insert your API key here
+    const url = `https://api.ipstack.com/check?access_key=${apiKey}`;
+
     // Fetch geolocation data based on IP address (no permission needed)
-    fetch('https://api.ipstack.com/check?access_key=13bbcb80bb4ff91eb1e9e65fcde8644e')
+    fetch(url)
       .then(response => response.json())
       .then(data => {
         const country = data.country_name;
         const city = data.city;
+        const latitude = data.latitude;    // Latitude
+        const longitude = data.longitude;  // Longitude
 
         const visitData = {
           timestamp: timestamp,
           userAgent: userAgent,
           country: country,
-          city: city
+          city: city,
+          latitude: latitude,
+          longitude: longitude
         };
 
         // Store data in localStorage or send it to your server
@@ -153,6 +161,7 @@ Aduceți-i pe cei mici la ora noastră captivantă a poveștii, unde poveștile 
         localStorage.setItem('visitor_data', JSON.stringify(visits));
 
         console.log('Visitor Location:', country, city);
+        console.log('Coordinates:', latitude, longitude);  // Log the coordinates
         console.log('Visitor Data:', visitData);
       })
       .catch(error => console.error('Error fetching geolocation data:', error));
@@ -161,6 +170,7 @@ Aduceți-i pe cei mici la ora noastră captivantă a poveștii, unde poveștile 
   // Run the tracking function
   trackVisitor();
 </script>
+
 
 
 </body>
