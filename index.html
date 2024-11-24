@@ -127,40 +127,41 @@ Aduceți-i pe cei mici la ora noastră captivantă a poveștii, unde poveștile 
             </div>
         </section>
     </main>
+  
   <script>
   function trackVisitor() {
-    // Get the user's geographic location
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
-        const timestamp = new Date().toISOString();
-        const userAgent = navigator.userAgent;
+    const timestamp = new Date().toISOString();
+    const userAgent = navigator.userAgent;
 
-        // Log the location, timestamp, and user agent
+    // Fetch geolocation data based on IP address (no permission needed)
+    fetch('https://api.ipstack.com/check?access_key=13bbcb80bb4ff91eb1e9e65fcde8644e')
+      .then(response => response.json())
+      .then(data => {
+        const country = data.country_name;
+        const city = data.city;
+
         const visitData = {
           timestamp: timestamp,
           userAgent: userAgent,
-          latitude: lat,
-          longitude: lon
+          country: country,
+          city: city
         };
 
-        // Store the data in localStorage or send it to an API
+        // Store data in localStorage or send it to your server
         let visits = JSON.parse(localStorage.getItem('visitor_data')) || [];
         visits.push(visitData);
         localStorage.setItem('visitor_data', JSON.stringify(visits));
 
-        console.log('Visitor Location:', lat, lon);
+        console.log('Visitor Location:', country, city);
         console.log('Visitor Data:', visitData);
-      });
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
+      })
+      .catch(error => console.error('Error fetching geolocation data:', error));
   }
 
   // Run the tracking function
   trackVisitor();
 </script>
+
 
 </body>
 </html>
