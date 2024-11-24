@@ -127,28 +127,35 @@ Aduceți-i pe cei mici la ora noastră captivantă a poveștii, unde poveștile 
             </div>
         </section>
     </main>
-    <script>
-  // Function to track visitor data
+  <script>
   function trackVisitor() {
-    // Get the current date and time
-    const timestamp = new Date().toISOString();
-    
-    // Get user data
-    const ip = 'unknown'; // Can’t track IP with JavaScript alone
-    const userAgent = navigator.userAgent;
+    // Get the user's geographic location
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const timestamp = new Date().toISOString();
+        const userAgent = navigator.userAgent;
 
-    // Log the data to localStorage (or sessionStorage)
-    const visitData = {
-      timestamp: timestamp,
-      userAgent: userAgent,
-    };
+        // Log the location, timestamp, and user agent
+        const visitData = {
+          timestamp: timestamp,
+          userAgent: userAgent,
+          latitude: lat,
+          longitude: lon
+        };
 
-    // Store data in localStorage
-    let visits = JSON.parse(localStorage.getItem('visitor_data')) || [];
-    visits.push(visitData);
-    localStorage.setItem('visitor_data', JSON.stringify(visits));
+        // Store the data in localStorage or send it to an API
+        let visits = JSON.parse(localStorage.getItem('visitor_data')) || [];
+        visits.push(visitData);
+        localStorage.setItem('visitor_data', JSON.stringify(visits));
 
-    console.log('Visitor Data Logged:', visitData);
+        console.log('Visitor Location:', lat, lon);
+        console.log('Visitor Data:', visitData);
+      });
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
   }
 
   // Run the tracking function
